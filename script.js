@@ -30,6 +30,13 @@ $('form button').click(function(e){
      console.log("get image clicked");
 });
 
+$('#nextBtn').click(function(e){
+    e.preventDefault();
+    if(breed !== undefined){
+        displayDog(breed);
+    }
+});
+
 function displayDog(breed){
     let url = "https://dog.ceo/api/breed/" + breed + "/images/random";
 
